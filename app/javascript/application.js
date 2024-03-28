@@ -2,3 +2,6 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 //=require rails-ujs
+
+import "trix"
+import "@rails/actiontext"
