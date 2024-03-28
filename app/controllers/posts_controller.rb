@@ -8,7 +8,8 @@ before_action :authenticate_user!, except: %i[show index]
 
   # GET /posts/1 or /posts/1.json
   def show
-    @post.update(views:@post.views + 1)
+    @post.update(views: @post.views + 1)
+    @comments = @post.comments.order(created_at: :desc)
   end
 
   # GET /posts/new
