@@ -1,0 +1,13 @@
+
+ <% if user_signed_in? %>
+ Logged in as <strong><%= current_user.email %></strong>
+   <%= link_to "Edit Profile  ", edit_user_registration_path, class:'navbar-link' %>
+<%= button_to "log_out  ", destroy_user_session_path, methode: :delete, class: "navbar-link" %>
+ <%else%>
+ <%= link_to "sign_up  ", new_user_registration_path, class:'navbar-link' %>
+ <%= link_to "login", new_user_session_path, class:'navbar-link' %>
+<% end %> 
+ 
+
+
+
